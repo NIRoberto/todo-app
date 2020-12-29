@@ -21,7 +21,7 @@ const schema = {
        const getUser = await users.findOne({ where: { email: req.body.email } });
            if (getUser) {
                 return res.status(409).json({
-                message: "Email exist have been taken",
+                Error: "Email  have been taken",
             });
        }
        const salt = await bcrypt.genSalt(5);
@@ -29,14 +29,14 @@ const schema = {
        const token  =  jwt.sign({ id:req.body.id, email: req.body.email }, process.env.TOKEN_SECRET);
 
        try {
-            const data = await users.create({
+            const user = await users.create({
                 email: req.body.email,
                 password: hash,
                 
             })
            return res.status(201).json({
                 message:"user created successfully and logged in ",
-                data,
+                user,
                 token
             });
         }
@@ -53,13 +53,13 @@ export const login = async (req, res) => {
 
     if (!getUser) {
                 return res.status(400).json({
-                message: "Incorrect email or password",
+                Error: "Incorrect email or password",
             });
     }
     const validPassword = await bcrypt.compare(req.body.password, getUser.password);
     if (!validPassword) {
               return res.status(400).json({
-                message: "Incorrect email or password",
+                Error: "Incorrect email or password",
             });
     }
     const token  =  jwt.sign({ userId:getUser.id, email: req.body.email }, process.env.TOKEN_SECRET);
