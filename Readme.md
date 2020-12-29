@@ -46,6 +46,10 @@ Run the server
 | DELETE /api/v1/todo/:id | Delete names of wrestles by using id|
 | PUT /api/v1/todo/:id | UPDATE names of wrestles by using id|
 
+## API documentation 
+- API documentation can be found here  
+
+
 ## Author 
 
 **Robert Niyitanga**
