@@ -8,7 +8,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({ extended: true, }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 
 
@@ -32,3 +32,4 @@ const port = process.env.PORT || 2000;
 app.listen(port, () => {
     console.log(`app is listen to port ${port}`);
 })
+export default app;
