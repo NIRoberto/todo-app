@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   wrestlenames.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    wrestleCreatorEmail: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'wrestlenames',
