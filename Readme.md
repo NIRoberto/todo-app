@@ -1,4 +1,5 @@
-## Todo app for wrestles names
+![GitHub  CI](https://github.com/NIRoberto/todo-app/workflows/GitHub%20%20CI/badge.svg)
+# Todo app for wrestles names
 
 
 This application will allow users to generate his/her favorite wrestles, will be able to update, delete, display names  of these wrestles.
