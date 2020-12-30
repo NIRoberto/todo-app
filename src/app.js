@@ -1,4 +1,6 @@
 import express from 'express';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import userRouter from './routes/user';
