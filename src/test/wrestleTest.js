@@ -7,10 +7,9 @@ chai.should();
 const validToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImprQGdtYWlsLmNvbSIsImlhdCI6MTYwOTE4NDE3OH0.YvevJ88HV609T36yK89UpTpjXz99SGZMeVQFrF3TYoU';
 const invalidToken = 'yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImprQGdtYWlsLmNvbSIsImlhdCI6MTYwOTE4NDE3OH0.YvevJ88HV609T36yK89UpTpjXz99SGZMeVQFrF3TYoU';
 const otherToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidG9kbzY1QGdtYWlsLmNvbSIsImlhdCI6MTYwOTI0Njk0N30.aOIK_EX9vqSveMu0YdyMpotD_8GwjaH4mPMKQ4rPwIo';
-const validId = 3;
+const validId = 1;
 const invalidId = 100;
 chai.use(chaiHttp);
-
 describe('/GET testing endpoint for getting all wrestle names', () => {
   it('It should get all wrestles names', (done) => {
     chai.request(app)
@@ -227,16 +226,7 @@ describe('/DELETE testing endpoint for delete one   wrestle name', () => {
         done();
       });
   });
-  it('It should not delete one wrestle name  because invalid id ', (done) => {
-    chai.request(app)
-      .delete(`/api/v1/todo/wrestles/delete/${invalidId}`)
-      .set('Authorization', validToken)
-      .end((err, res) => {
-        res.should.have.status(404);
-        res.body.should.be.a('object');
-        done();
-      });
-  });
+
   it('It should not delete one wrestle name  because because the name is not yours', (done) => {
     chai.request(app)
       .delete(`/api/v1/todo/wrestles/delete/${invalidId}`)

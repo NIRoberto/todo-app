@@ -1,5 +1,4 @@
-![Node.js CI](https://github.com/NIRoberto/todo-app/workflows/Node.js%20CI/badge.svg)
-
+![GitHub  CI](https://github.com/NIRoberto/todo-app/workflows/GitHub%20%20CI/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/7b6b591c7b3bd2bc0bfd/maintainability)](https://codeclimate.com/github/NIRoberto/todo-app/maintainability) [![Coverage Status](https://coveralls.io/repos/github/NIRoberto/todo-app/badge.svg?branch=develop)](https://coveralls.io/github/NIRoberto/todo-app?branch=develop)
 # Todo app for wrestles names
 
 
@@ -8,9 +7,9 @@ This application will allow users to generate his/her favorite wrestles, will be
 ## Technology used are
 
 - Node
-- es6
+- ES6
 - Postgres
-- Sequilize
+- Sequelize
 - Express
 - Mocha & chai
 
@@ -49,8 +48,8 @@ Run the server
 | PUT /api/v1/todo/:id | UPDATE names of wrestles by using id|
 
 ## API documentation 
-- API documentation can be found here  
 
+- API documentation can be found [here](https://wrestle-app.herokuapp.com/swaggerDocument/)  
 
 ## Author 
 

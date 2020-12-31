@@ -4,3 +4,5 @@ bin
 .nyc_output
 coverage
 build
+api
+swagger ui
