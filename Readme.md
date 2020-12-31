@@ -1,4 +1,5 @@
-![GitHub  CI](https://github.com/NIRoberto/todo-app/workflows/GitHub%20%20CI/badge.svg)
+![Node.js CI](https://github.com/NIRoberto/todo-app/workflows/Node.js%20CI/badge.svg)
+
 # Todo app for wrestles names
 
 
