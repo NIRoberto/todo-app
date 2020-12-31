@@ -61,8 +61,8 @@ describe('/POST testing endpoint for user login', () => {
       .post('/api/v1/todo/user/login')
       .send({
 
-        email: 'todo65@gmail.com',
-        password: '65432',
+       email: 'robz@gmail.com',
+        password: '123456',
 
       })
       .end((err, res) => {
