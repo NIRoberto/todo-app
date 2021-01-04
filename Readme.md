@@ -1,4 +1,4 @@
-![GitHub  CI](https://github.com/NIRoberto/todo-app/workflows/GitHub%20%20CI/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/7b6b591c7b3bd2bc0bfd/maintainability)](https://codeclimate.com/github/NIRoberto/todo-app/maintainability) [![Coverage Status](https://coveralls.io/repos/github/NIRoberto/todo-app/badge.svg?branch=develop)](https://coveralls.io/github/NIRoberto/todo-app?branch=develop)
+![Node.js CI](https://github.com/NIRoberto/todo-app/workflows/Node.js%20CI/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/7b6b591c7b3bd2bc0bfd/maintainability)](https://codeclimate.com/github/NIRoberto/todo-app/maintainability) [![Coverage Status](https://coveralls.io/repos/github/NIRoberto/todo-app/badge.svg?branch=develop)](https://coveralls.io/github/NIRoberto/todo-app?branch=develop)
 # Todo app for wrestles names
 
 
