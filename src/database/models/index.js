@@ -4,9 +4,10 @@ const Sequelize = require('sequelize');
 
 const basename = path.basename(__filename);
 const { TEST_DB } = require('../../test/dbconfig');
+const envConfigs = require(`../config/config`);
 
 const env = TEST_DB;
-const config = require(`${__dirname}/../config/config`)[env];
+const config = envConfigs[env];
 const db = {};
 
 let sequelize;
@@ -14,7 +15,7 @@ if (config.url) {
   try {
     sequelize = new Sequelize(config.url, { logging: false });
     sequelize.authenticate();
-    console.log('Connection has been established successfully.');
+    console.log('DB connected');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
