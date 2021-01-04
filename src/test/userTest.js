@@ -38,6 +38,7 @@ describe('/POST testing endpoint for user signup', () => {
         done();
       });
   });
+
   it('It should not be able to signup because email already been taken', (done) => {
     chai.request(app)
       .post('/api/v1/todo/user/signup/')

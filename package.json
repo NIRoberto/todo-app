@@ -4,10 +4,10 @@
   "description": "todo app for wrestlers",
   "main": "server.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test  nyc --reporter=html --reporter=text mocha --require babel-polyfill --require @babel/register --recursive --exit  src/test/*.js --timeout 90000",
+    "test": "  nyc --reporter=html --reporter=text  mocha --require babel-polyfill --require @babel/register --recursive --exit  src/test/*.js --timeout 90000",
     "start": "node ./build/src/app.js ",
-    "build": " npm run db:migrate && rm -rf ./build/ && babel ./src/ -d ./build/src/ && cp -r ./src/database/  ./build/database/ && babel  ./src/app.js -d ./build/",
-    "dev": "nodemon  --exec babel-node src/app.js",
+    "build": " npm run db:migrate && babel src/. --out-dir build/src"
+,   "dev": "nodemon  --exec babel-node src/app.js",
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
     "coverage": "  nyc report --reporter=text-lcov | coveralls",

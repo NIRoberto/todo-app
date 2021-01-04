@@ -12,20 +12,40 @@ jobs:
   build:
 
     runs-on: ubuntu-20.04
-    
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 
+
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
     strategy:
       matrix:
         node-version: [12.x,14.x]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+   
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-     
+      - name: Connect to PostgreSQL
+      
+        run: node 
+        env:
+         DATABASE_URL: postgres://postgres:Niy123@localhost:5432/tododev
+      - name: Run migration 
+        run: npm run db:migrate
       - name: Build
         run: npm run build
       - name: Test

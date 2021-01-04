@@ -4,7 +4,7 @@ import app from '../app';
 
 chai.use(chaiHttp);
 chai.should();
-const validToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImprQGdtYWlsLmNvbSIsImlhdCI6MTYwOTE4NDE3OH0.YvevJ88HV609T36yK89UpTpjXz99SGZMeVQFrF3TYoU';
+const validToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvZG8xMkBnbWFpbC5jb20iLCJpYXQiOjE2MDk1MDc3Mjd9.EYDVojTkuLLPuZeQpevi-cnjE-SPG9vOOQ-bBzfx_ME';
 const invalidToken = 'yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImprQGdtYWlsLmNvbSIsImlhdCI6MTYwOTE4NDE3OH0.YvevJ88HV609T36yK89UpTpjXz99SGZMeVQFrF3TYoU';
 const otherToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidG9kbzY1QGdtYWlsLmNvbSIsImlhdCI6MTYwOTI0Njk0N30.aOIK_EX9vqSveMu0YdyMpotD_8GwjaH4mPMKQ4rPwIo';
 const validId = 1;
