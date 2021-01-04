@@ -1,8 +1,8 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import Joi from '@hapi/joi';
-import { users } from '../database/models';
 import dotenv from 'dotenv';
+import { users } from '../database/models';
 
 dotenv.config();
 
